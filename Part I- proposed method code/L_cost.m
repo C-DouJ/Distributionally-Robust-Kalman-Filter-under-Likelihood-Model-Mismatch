@@ -1,0 +1,16 @@
+function L = L_cost(u, S, Pk1k, xk1k, H, R, z)
+    epsilon = 1e-6;  
+    S = S + epsilon * eye(size(S));  
+    HS = H * S * H' + R; 
+    HS = HS + epsilon * eye(size(HS));  
+    Pk1k_pinv = pinv(Pk1k);
+    HS_pinv = pinv(HS);
+
+    L = 0.5 * (...
+        - sum(log(abs(eig(S)))) + ...  
+        trace(Pk1k_pinv * S) + ...
+        (u - xk1k)' * (Pk1k_pinv * (u - xk1k)) + ...
+        sum(log(abs(eig(HS)))) + ...  
+        (z - H * u)' * (HS_pinv * (z - H * u)));
+end
+
