@@ -18,7 +18,7 @@ If you find this repository useful, please consider giving it a star ⭐ and cit
   number={},
   pages={7115-7133},
 }
-@ARTICLE{11417918,
+@ARTICLE{cheng2026drkf2,
   author={Cheng, Jiajun and Xue, Zhirui and Chen, Haonan and Huang, Yulong},
   journal={IEEE Transactions on Aerospace and Electronic Systems}, 
   title={Distributionally Robust Kalman Filter Under Likelihood Model Mismatch From an Optimization Perspective— Part II: Extension and Application to Cooperative Localization}, 
